@@ -1,0 +1,72 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "jsdoc-format": [
+      true,
+      "check-multiline-start"
+    ],
+    "prefer-for-of": true, // 建议使用for(..of)
+    "promise-function-async": true, // 要求异步函数返回promise
+    "await-promise": true, // 警告不是一个promise的await
+    "no-empty": true, // 不允许空的块
+    "triple-equals": true, // 必须使用 === 或 ！== 禁止使用 == 或 ！= ，与 null 相比较除外
+    "use-isnan": true, // 必须使用isNaN() 而不是 foo === NaN
+    "no-duplicate-imports": true, // 禁止出现重复import
+    "import-spacing": true, // 关键字之间必须是一个空格
+    "no-unused-expression": true, //禁止无用的表达式
+    "no-unused-variable": true, // 定义过的变量必须使用
+    "no-parameter-reassignment": true, // 禁止对函数的参数重新赋值
+    "no-return-await": true, // 禁止没必要的await
+    "no-switch-case-fall-through": true, // switch 的case 必须 return 或 break
+    "deprecation": false, // 禁止使用废弃的API
+    "no-unbound-method": [ // 使用实例方法时，必须 bind 到实例上
+      true,
+      "ignore-static"
+    ],
+    "trailing-comma": [ // 对尾随逗号的校验
+      true,
+      {
+        "multiline": {
+          "objects": "ignore",
+          "arrays": "never",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        },
+        "esSpecCompliant": true // 是否允许尾随逗号出现在剩余变量中
+      }
+    ],
+    "arrow-parens": true, // 箭头函数定义参数必须要有括号
+    "no-use-before-declare": true, // 变量必须先定义后使用
+    // "no-implicit-dependencies": true, // 不允许在项目的package.json中导入未列为依赖项的模块
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "space-before-function-paren": [
+      true,
+      "promise-function-async"
+    ],
+    "space-within-parens": [
+      true,
+      0
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-interfaces"
+    ],
+    "no-consecutive-blank-lines": [ // 禁止出现连续三行空格
+      true,
+      3
+    ]
+  }
+}
